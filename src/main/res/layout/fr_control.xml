@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <include layout="@layout/view_weather"
+            android:id="@+id/weatherView"
+            android:layout_height="90dp"
+            android:visibility="gone"
+            android:layout_width="match_parent">
+
+        </include>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#60ffffff">
+                <Button
+                    android:id="@+id/btnThresholdConfig"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:text="阈值设置"
+                    android:background="@drawable/button_default_selector"
+                    android:textColor="#fff"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+        <com.baoyz.widget.PullRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <ExpandableListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/expandControlListView">
+
+
+                </ExpandableListView>
+
+        </com.baoyz.widget.PullRefreshLayout>
+
+
+
+
+</LinearLayout>

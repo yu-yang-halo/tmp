@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.fuck.fishfarming">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- zxing -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <application
+        android:name=".application.MyApplication"
+        tools:replace="android:label"
+        android:icon="@mipmap/logo"
+        android:label="${APP_NAME}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="SBz7W2O9pZqNkovrdyI9CFSxdi9vDYGa"/>
+
+        <activity android:name="cn.fuck.fishfarming.activity.LaunchActivity"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.fuck.fishfarming.activity.LoginActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.fuck.fishfarming.activity.MainActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.fuck.fishfarming.activity.TabActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.fuck.fishfarming.activity.NewsActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.fuck.fishfarming.web.WebActivity" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.fuck.fishfarming.activity.HistoryActivity" android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="cn.fuck.fishfarming.activity.ui.AlertConfigUi" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.fuck.fishfarming.activity.ui.ThresholdConfigUi" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.fuck.fishfarming.activity.ui.ServerListUi" android:screenOrientation="portrait">
+        </activity>
+
+        <meta-data android:value="0a4e5381e816e73c2b68eebaa83dfa8e" android:name="BUG_HD_SDK_GENERAL_KEY" />
+
+
+
+        <activity
+            android:name="com.videogo.main.EzvizWebViewActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.videogo.remoteplayback.list.PlayBackListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="nosensor"/>
+        <activity
+            android:name="com.videogo.ui.cameralist.EZCameraListActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.videogo.ui.realplay.EZRealPlayActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.videogo.ui.message.EZMessageImageActivity2"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.videogo.ui.message.EZMessageActivity2"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.videogo.ui.remoteplayback.EZRemotePlayBackActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.videogo.devicemgt.EZDeviceSettingActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.videogo.devicemgt.ModifyDeviceNameActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name="com.videogo.scan.main.CaptureActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.videogo.ui.devicelist.SeriesNumSearchActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.videogo.ui.devicelist.AutoWifiNetConfigActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.videogo.ui.devicelist.AutoWifiConnectingActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.videogo.ui.devicelist.AutoWifiPrepareStepOneActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.videogo.ui.devicelist.AutoWifiResetActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:screenOrientation="portrait"/>
+
+        <receiver
+            android:name="com.videogo.EzvizBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.videogo.action.ADD_DEVICE_SUCCESS_ACTION"/>
+                <action android:name="com.videogo.action.OAUTH_SUCCESS_ACTION"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.videogo.devicemgt.EZUpgradeDeviceActivity"
+            android:label="@string/title_activity_ezupgrade_device">
+        </activity>
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="${PGYER_APPID_DATA}" >
+        </meta-data>
+        <provider android:name="android.support.v4.content.FileProvider"
+            android:authorities="${APP_PROVIDER}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+    </application>
+
+</manifest>
